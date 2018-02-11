@@ -1,0 +1,82 @@
+#Bloc 1
+git init .
+type NUL > A.txt
+git add A.txt
+git commit -m "fitxer inicial"
+type NUL > B.txt
+git add B.txt
+git commit -m "fitxer inicial"
+#Bloc 2
+echo Canvi A1 >> A.txt
+echo Canvi B1 >> B.txt
+git add A.txt B.txt
+git commit -m "Canvis Bloc 2"
+#Bloc 3
+git branch branca1
+git checkout branca1
+type NUL > C.txt
+git add C.txt
+git commit -m "fitxer inicial"
+echo canvi C1 branca 1 >> C.txt
+git add C.txt
+git commit -m "canvi branca 1"
+#Bloc 4
+git checkout master
+git branch branca2
+git checkout branca2
+type NUL > D.txt
+git add D.txt
+git commit -m "fitxer inicial"
+echo canvi D1 branca 2 >> D.txt
+git add D.txt
+git commit -m "canvi branca 1"
+#Bloc 5
+git checkout branca1
+git merge branca2
+git checkout master
+git merge branca1
+#Bloc 6
+git checkout master
+type NUL > E.txt
+git add E.txt
+git commit -m "fitxer inicial"
+git branch branca3
+git checkout branca3
+echo canvia E1 branca 3 >> E.txt
+git add E.txt
+git commit -m "Modificacio E Branca 3"
+git checkout master
+git branch branca4
+git checkout branca4
+echo canvia E1 branca 4 >> E.txt
+git add E.txt
+git commit -m "Modificacio E Branca 4"
+git checkout master
+git merge branca3
+git merge branca4
+git merge branca4
+git checkout --ours E.txt
+git add E.txt
+git commit -m "Merge Branques 3 i 4"
+#Branca 7
+git checkout master
+echo Canvi A2 >> A.txt
+git add A.txt
+git commit -m "Canvi A2"
+git reset --hard 6041478
+#Branca 8
+git checkout master
+echo Canvi A3 >> A.txt
+git add A.txt
+git commit -m "Canvi A3"
+echo Canvi B2 >> B.txt
+git add B.txt
+git commit -m "Canvi B2"
+echo Canvi C1 >> C.txt
+git add C.txt
+git commit -m "Canvi C1"
+git revert 9a066d1
+q
+a
+git add B.txt
+git commit -m "Desfem B2"
