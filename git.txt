@@ -1,9 +1,9 @@
 #Bloc 1
 git init .
-type NUL > A.txt
+touch A.txt
 git add A.txt
 git commit -m "fitxer inicial"
-type NUL > B.txt
+touch B.txt
 git add B.txt
 git commit -m "fitxer inicial"
 #Bloc 2
@@ -14,7 +14,7 @@ git commit -m "Canvis Bloc 2"
 #Bloc 3
 git branch branca1
 git checkout branca1
-type NUL > C.txt
+touch C.txt
 git add C.txt
 git commit -m "fitxer inicial"
 echo canvi C1 branca 1 >> C.txt
@@ -24,7 +24,7 @@ git commit -m "canvi branca 1"
 git checkout master
 git branch branca2
 git checkout branca2
-type NUL > D.txt
+touch D.txt
 git add D.txt
 git commit -m "fitxer inicial"
 echo canvi D1 branca 2 >> D.txt
@@ -37,7 +37,7 @@ git checkout master
 git merge branca1
 #Bloc 6
 git checkout master
-type NUL > E.txt
+touch E.txt
 git add E.txt
 git commit -m "fitxer inicial"
 git branch branca3
