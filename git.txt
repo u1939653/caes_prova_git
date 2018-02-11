@@ -63,7 +63,7 @@ git checkout master
 echo Canvi A2 >> A.txt
 git add A.txt
 git commit -m "Canvi A2"
-git reset --hard 6041478
+git revert HEAD --no-edit
 #Branca 8
 git checkout master
 echo Canvi A3 >> A.txt
@@ -75,8 +75,4 @@ git commit -m "Canvi B2"
 echo Canvi C1 >> C.txt
 git add C.txt
 git commit -m "Canvi C1"
-git revert 9a066d1
-q
-a
-git add B.txt
-git commit -m "Desfem B2"
+git revert HEAD~1 --no-edit 
